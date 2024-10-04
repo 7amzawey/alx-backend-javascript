@@ -1,15 +1,14 @@
 export default function iterateThroughObject(reportWithIterator) {
-  let str = ``;
+  let str = '';
   const iterator = reportWithIterator[Symbol.iterator]();
   let result = iterator.next();
-  
+
   while (!result.done) {
     str += `${result.value}`;
     result = iterator.next();
     if (!result.done) {
-      str += ` | `;
+      str += ' | ';
     }
   }
   return str;
 }
-
