@@ -1,11 +1,12 @@
 const http = require('http');
 
-const app = http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   res.end('Hello Holberton School!');
 });
 
 const PORT = 1245;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log('Server is starting mate');
 });
-module.exports = app;
+
+module.exports = server;
