@@ -20,4 +20,11 @@ describe('API integration test', () => {
             done();
         });
     });
+
+    it('GET /cart/emad returns 404', function(done) {
+        request.get(`${API_URL}/cart/emad`, (_err, res, _body) => {
+            expect(res.statusCode).to.be.equal(404);
+            done();
+        });
+    });
 });
